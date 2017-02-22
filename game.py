@@ -39,8 +39,8 @@ while True:
   guess_count += 1
   guess = input("Enter you guess number #{0}. (you are looking for 4 digit number: ".format(guess_count))
 
-  if guess!="x" and guess!="cheat" and not is_string_valid_bulls_cows_number(guess):
-    print("Invalid guess, it has to be 4 digit number with each digit unique !!!!")
+  if guess!="x" and guess!="cheat" and len(guess)!=4:
+    print("Invalid guess, it has to be 4 digit number !!!!")
     continue
   
   if guess == "x":
